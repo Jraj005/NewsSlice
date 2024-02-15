@@ -7,7 +7,7 @@ import io
 import nltk
 nltk.download('punkt')
 
-st.set_page_config(page_title='InNews🇮🇳: A Summarised News📰 Portal', page_icon='./Meta/newspaper.ico')
+st.set_page_config(page_title='NewsSlice: A Summarised News📰 Portal', page_icon='./Meta/newspaper.ico')
 
 
 def fetch_news_search_topic(topic):
@@ -76,7 +76,7 @@ def display_news(list_of_news, news_quantity):
 
 
 def run():
-    st.title("InNews🇮🇳: A Summarised News📰")
+    st.title("NewsSlice: A Summarised News📰")
     image = Image.open('./Meta/newspaper.png')
 
     col1, col2, col3 = st.columns([3, 5, 3])
@@ -95,7 +95,8 @@ def run():
         st.warning('Please select Type!!')
     elif cat_op == category[1]:
         st.subheader("✅ Here is the Trending🔥 news for you")
-        no_of_news = st.slider('Number of News:', min_value=5, max_value=25, step=1)
+        # no_of_news = st.slider('Number of News:', min_value=5, max_value=25, step=1)
+        no_of_news = 15
         news_list = fetch_top_news()
         display_news(news_list, no_of_news)
     elif cat_op == category[2]:
@@ -116,7 +117,8 @@ def run():
 
     elif cat_op == category[3]:
         user_topic = st.text_input("Enter your Topic🔍")
-        no_of_news = st.slider('Number of News:', min_value=5, max_value=15, step=1)
+        # no_of_news = st.slider('Number of News:', min_value=5, max_value=15, step=1)
+        no_of_news = 15
 
         if st.button("Search") and user_topic != '':
             user_topic_pr = user_topic.replace(' ', '')
