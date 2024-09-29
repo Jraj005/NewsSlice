@@ -1,9 +1,8 @@
 Pillow
-newspaper3k==0.2.8
+git+https://github.com/codelucas/newspaper.git  # Use the forked version of newspaper
 urllib3
 streamlit
 beautifulsoup4
-lxml==4.9.1  # Specify the latest compatible version
 protobuf==3.20.0
 jinja2>=3.0
 requests
