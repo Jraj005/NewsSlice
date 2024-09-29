@@ -1,8 +1,10 @@
 Pillow
-git+https://github.com/codelucas/newspaper.git  # Use the forked version of newspaper
+newspaper3k==0.2.8
 urllib3
 streamlit
 beautifulsoup4
+lxml
 protobuf==3.20.0
 jinja2>=3.0
 requests
+git+https://github.com/codelucas/newspaper.git  # Forked version of newspaper
